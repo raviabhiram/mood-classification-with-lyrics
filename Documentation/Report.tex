@@ -121,7 +121,6 @@ A problem that is similar to mood classification is genre detection. Song predic
 
 \section{Data}
 \label{data}
-Brief description of the dataset. How many instances are in each class. How many tokens. Where does the dataset come from. How was it annotated. 0.5pg\\
 As mention in section \ref{introduction}, the data consisted of around 2,000 instances. Once the data was collected, a group of 24 students from Rochester Institute of Technology were assigned the task of annotating the data. Each one of the 24 were requested to annotate a minimum of 200 instances. A particular instance was annotated by three different students to ensure the best possible annotation. Students were instructed to assign every record at least one class among the given nine class labels.\\ 
 Once the annotation was done, every record had more than one class label associated with it. As part of the data pre-processing, the data was converted into two forms:
 \begin{enumerate}
@@ -164,6 +163,33 @@ Table \ref{distribution} shows the distribution of data into these three classes
   \end{tabular}
 \end{table}
 
+\begin{figure}[!htbp]
+  \begin{center}
+  \includegraphics[width=3in]{3_sadness.png}
+  \caption{Word cloud obtained by plotting the words labelled as sadness.}
+  \label{sadness}
+  \end{center}
+\end{figure}
+
+Classification of songs is not a trivial task. It cannot be simply achieved by computing the frequency of words belonging to each label and looking at patterns in them. Building such complex models is a necessity. Figures \ref{sadness}, \ref{tenderness} and \ref{tension} show the word clouds obtained by visualising the top 200 words belonging to each class label.
+
+\begin{figure}[htb]
+  \begin{center}
+  \includegraphics[width=3in]{4_tenderness.png}
+  \caption{Word cloud obtained by plotting the words labelled as tenderness.}
+  \label{tenderness}
+  \end{center}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{center}
+  \includegraphics[width=3in]{5_tension.png}
+  \caption{Word cloud obtained by plotting the words labelled as tension.}
+  \label{tension}
+  \end{center}
+\end{figure}
+
+Before visualising these word clouds, the data had to be cleaned. Without cleaning the data consisted of a lot of punctuations and symbols. This cleaning was done using packages provided by nltk \cite{nltk}. To clean the data, it first had to be prepared in a way that it could be consumed by the tokenizer and to achieve that the data was first segmented. Once the data was cleaned, data points corresponding to each one of the three classes were filtered out and passed to the word cloud visualiser. The visualisation was done using matplotlib \cite{matplotlib}.
 
 \section{Methods}
 \label{methods}
@@ -278,6 +304,6 @@ This project provided a way to classify lyrics into the three classes of 'sadnes
 \label{sec:appendix}
 
 It might be questioned as to why Naïve Bayes was not mentioned about or considered for the classification task. Naïve Bayes is known to perform well for complete data. In fact, it would not even work on data with holes. When it comes to text and especially this project with songs, data can never be guaranteed to be complete. Naïve Bayes also performs better on numerical data rather than textual data.\\
-
+Find the code at \href{https://github.com/raviabhiram/mood-classification-with-lyrics}{here}.
 
 \end{document}
