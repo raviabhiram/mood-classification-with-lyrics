@@ -189,7 +189,7 @@ Classification of songs is not a trivial task. It cannot be simply achieved by c
   \end{center}
 \end{figure}
 
-Before visualising these word clouds, the data had to be cleaned. Without cleaning the data consisted of a lot of punctuations and symbols. This cleaning was done using packages provided by nltk \cite{nltk}. To clean the data, it first had to be prepared in a way that it could be consumed by the tokenizer and to achieve that the data was first segmented. Once the data was cleaned, data points corresponding to each one of the three classes were filtered out and passed to the word cloud visualiser. The visualisation was done using matplotlib \cite{matplotlib}.
+Before visualising these word clouds, the data had to be cleaned. Without cleaning the data consisted of a lot of punctuations and symbols. This cleaning was done using packages provided by nltk \footnote{\url{https://www.nltk.org/}}. To clean the data, it first had to be prepared in a way that it could be consumed by the tokenizer and to achieve that the data was first segmented. Once the data was cleaned, data points corresponding to each one of the three classes were filtered out and passed to the word cloud visualiser. The visualisation was done using matplotlib \footnote{\url{https://matplotlib.org/}}.
 
 \section{Methods}
 \label{methods}
@@ -197,9 +197,9 @@ After the data has been curated, it is now ready to be consumed by machine learn
 
 \subsection{Technology Used}
 \label{techstack}
-A bunch of technologies and libraries were used in building this song classifier. Firstly, the data was annotated using LightTag \cite{lighttag}. LightTag aids in collaboration of annotators. It does not restrict one annotator from working while other might be too. LightTag also provides a simplistic and holistic design so that annotating becomes hassle free.\\
-For the main implementation of the models, Jupyter Notebook \cite{jupyter} are used. Jupyter Notebook helps increase the productivity by saving previously run code. It allows for a way to run certain segments of the code and store the results in memory. That way every block of code can be individually built and shipped. In pipelines like machine learning where certain operations are very heavy, for instance loading huge amounts of data, this could be useful since data can be loaded once but varoius different operations can be performed on it.\\
-A bunch of packages and frameworks were used to build the models. The data was loaded and stored in pandas \cite{pandas} dataframes. Most of the machine learning models were built using libraries from scikit-learn \cite{sklearn}.
+A bunch of technologies and libraries were used in building this song classifier. Firstly, the data was annotated using LightTag \footnote{\url{http://lighttag.io}}. LightTag aids in collaboration of annotators. It does not restrict one annotator from working while other might be too. LightTag also provides a simplistic and holistic design so that annotating becomes hassle free.\\
+For the main implementation of the models, Jupyter Notebook \footnote{\url{https://jupyter.org}} are used. Jupyter Notebook helps increase the productivity by saving previously run code. It allows for a way to run certain segments of the code and store the results in memory. That way every block of code can be individually built and shipped. In pipelines like machine learning where certain operations are very heavy, for instance loading huge amounts of data, this could be useful since data can be loaded once but varoius different operations can be performed on it.\\
+A bunch of packages and frameworks were used to build the models. The data was loaded and stored in pandas \footnote{\url{https://pandas.pydata.org/}} dataframes. Most of the machine learning models were built using libraries from scikit-learn \footnote{\url{https://scikit-learn.org/stable/}}.
 
 \subsection{Models}
 \label{models}
